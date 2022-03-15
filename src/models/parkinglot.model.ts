@@ -36,6 +36,12 @@ const parkingLotSchema = new Schema({
       available: { type: Number },
     },
   },
+  parkings: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Parking",
+    },
+  ],
 });
 
 const ParkingLot = mongoose.model("ParkingLot", parkingLotSchema);
