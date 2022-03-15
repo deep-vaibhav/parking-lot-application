@@ -9,6 +9,7 @@ enum VehicleTypes {
 const parkingLotSchema = new Schema({
   name: {
     type: String,
+    unique: true,
   },
   rates: {
     SUV: {
